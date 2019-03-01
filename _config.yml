@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "My Hideout!"
 title_separator          : "-"
 name                     : "JangSeonPark"
-description              : "An amazing website."
+description              : "I document everythings about myself!"
 url                      : "https://ParkSSun.github.io"# the base hostname & protocol for your site
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
