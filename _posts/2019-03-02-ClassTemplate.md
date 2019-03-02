@@ -111,6 +111,7 @@ void PosValue<T>::OutValue(){...}
 ## NonType Argument
 - 보통 템플릿에 전달 되는 것은 타입이다.
 - Nontype Argument는 타입이 아닌 상수를 템플릿 인수로 전달할 수 있는 것을 말한다.
+
 ```c++
 template <typename T, int N>
 class Array{
@@ -120,15 +121,16 @@ public:
     void SetAt(int n, T v){ }
     T GetAt(int n){ }
 };
-
 void main(){
     Array<int, 3> tt;
     tt.SetAt(1,3);
 }
 ```
+
 - 위 와 같은 코드에서 정수 상수가 템플릿의 전달되는 인수이므로 비타입 인수라고 한다.
 - 문제는 크기가 다른 객체를 선언할 때 마다, 클래스가 구체화 되므로 이 때문에 멤버함수도 전부 따로 만들어진다. 따라서 메모리의 낭비가 심하다.
 - 주의 할 점은, 비타입 인수는 반드시 상수여야 한다는 것이다. runtime에 결정되는 변수가 인수로 들어가서는 안된다.
+
 ```c++
 int size = 5;
 Array<int, size> tt; //불가능 하다.
@@ -139,6 +141,7 @@ Array<int, size> tt; //가능하다.
 
 ## 디폴트 template 인수
 - 선언시 <>괄호 속에 타입을 지정해 주지 않아도 자동으로 들어가는 타입을 밀리 설정해 놓을 수 있다.
+
 ```c++
 template <typename T = int>
 class PosValue{
@@ -158,6 +161,7 @@ void main(){
 ## 명시적 구체화 (Explicit Instantiation)
 - 어떤 특정 타입에 대해서 미리 class선언을 만들어 놓으려고 하는 경우 사용
 - compiler가 해당 클래스의 객체를 생성하는 것이 아니고, 클래스를 생성하는 것이다.
+
 ```c++
 template class PosValue<float>;
 ```
@@ -165,6 +169,7 @@ template class PosValue<float>;
 ## 특수화(Specialization)
 - 특정 타임에 대한 클래스를 따로 생성하는 것
 - 예를 들어 기본 타입(int, double, char...)등에서는 지원이 가능하나, class나 structure와 같은 타입에서는 동작이 달라지는 경우 해당 타입에 대해서만 구체화가 가능하다.
+
 ```c++
 template <typename T>
 class PosValue{
@@ -195,8 +200,8 @@ public:
 - 사실 제일 좋은 것은 tag_Friend를 int와 같이 사용할 수 있도록 하여 Specialization을 하지 않는 것이 제일 좋다.
 - **Specialization을 선언하는 방법**
 
-```c++
-template<> class 클래스명<특수타입>
+```
+template<> class 클래스명<특수타입>;
 ```
 - 특수화를 하게 되면 클래스는 객체를 선언하지 않더라도 자동으로 구체화된다.
 - 즉, 클래스의 정의가 만들어지고 멤버함수들은 컴파일 되어서 실행파일에 포함된다.
@@ -204,11 +209,13 @@ template<> class 클래스명<특수타입>
 
 ## 부분 특수화 (Partial Specialization)
 - 템플릿의 인수가 여러개 있을 때, 그 중 한개에 대해서 특수화를 진행하려고 하는 기법이다.
+
 ```c++
 template <typename T1, typename T2> class SomeClass{...};
 ```
 - 위 와 같은 클래스의 경우 <int, int> , <int, double>, <double, int>등 다양한 조합이 가능하다.
 - 부분 특수화는 이 중 한개의 타입에 대해서 강제로 지정하고 싶을 때 사용한다.
+
 ```c++
 template<typename T1> class SomeClass<T1, double>{...};
 ```
