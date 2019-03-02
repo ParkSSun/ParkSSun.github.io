@@ -1,6 +1,6 @@
 ---
-title: "C++Study-Template Function"
-date: 2019-03-02 19:20:00 
+title: "C++Study-Function Template"
+date: 2019-03-02 19:20:00
 categories: c++
 ---
 # FunctionTemplate
@@ -202,5 +202,3 @@ template<> void Swap<double>(double &a, double &b){ //Specialization
 | '5' | ``` void Swap<>(double &a, double &b)```  | '최신 표준에서는 인정 안됨'|
 | '6' | ``` void Swap(double &a, double &b)```  | '그냥 일반 함수 Swap을 선언, 비추' |
 | 'cf' | ``` template void Swap<double>(double &a, double &b)``` 명시적 구체화  | '명시적 구체화와 특수화 선언시 주의!'|
-
-
