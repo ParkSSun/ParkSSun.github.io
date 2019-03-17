@@ -73,4 +73,3 @@ categories: c++
     - sort Function :정렬 알고리즘
     - reverse function : reverse 시키는 알고리즘
     - random_shuffle : random으로 섞는 알고리즘
-     
