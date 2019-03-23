@@ -4,7 +4,7 @@
     categories: DRAM
     ---
 
-    # TruthTable Note 정리
+# TruthTable Note 정리
 
 1. 모든 DDR4 commend는 CS_n, ACT_n, RAS_n/A16, CAS_n/A15, WE_n/A14, CKE(rising Edge일 때)에 의해서 결정된다.
     - CKE pin 이 Low로 있으면 이 Pin들의 값은 의미없는 것 ?! No! Low 일 때의 Operation이 있다.
