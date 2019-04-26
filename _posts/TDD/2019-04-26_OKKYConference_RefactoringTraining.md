@@ -1,5 +1,5 @@
 ---
-title: "TDDStudy-Conference_RefactoringTraining.md"
+title: "TDDStudy-Conference_RefactoringTraining"
 date: 2019-04-26 20:20:00
 categories: TDD
 ---

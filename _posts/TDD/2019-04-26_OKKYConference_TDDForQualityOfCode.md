@@ -70,4 +70,5 @@ RodHilton, Quantitative evaluating Test Driven Development by Applying object or
 ## Refactoring Smell
 - refactoring.com/catalog/ 참고
 - BDD(Behavior Driven Development)/ATDD(Acceptance Test Driven Development)
-- 
+- 어떻게 Test해야 할 것을 뽑아낼 수 있을 까? 이를 BDD를 이용한다.
+-
