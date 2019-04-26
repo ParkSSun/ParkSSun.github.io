@@ -1,6 +1,6 @@
 ---
 title: "DDR4-CTRL paper review"
-date: 2019-03-32 00:18:00
+date: 2019-03-23 00:18:00
 categories: DRAM
 ---
 
