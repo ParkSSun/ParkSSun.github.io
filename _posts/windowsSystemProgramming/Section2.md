@@ -55,3 +55,56 @@ int main(){
 	return 0;
 }
 ```
+
+- 위의 예제들을 통해서 알수있는 점은 WBCS를 위한 함수들이 따로 존재한다는 것이다.
+- Main함수의 경우에도 함수인자로 SBCS을 받도록 되어 있다.
+- WBCS을 위한 Main함수는 다음 아래와 같이 wmain이고 input인자로 wchar_t*([])을 받도록 되어있다.
+
+```c++
+typedef unsigned short wchart_t;
+int main(int argc, char* argv[]){
+
+}
+
+int wmain(int argc, wchar_t* argv[]){
+
+}
+```
+# MBCS와 WBCS의 동시 지원
+---
+- MBCS를 지원할 것인가 WBCS를 지원 할 것인가 하는 문제는 따로 코딩을 해야하는 문제가 발생한다.
+- 따라서 이를 해결 하기 위한 방법에 대해서 알아보자.
+- **시스템 프로그래밍시 이제 아래에서 제안하는 방법으로 코딩을 하도록 하자.**
+
+## #include <windows.h>
+- windows.h는 윈도우즈 프로그래밍을 하면서 기본적으로 항상 포함하는 header파일이다.
+- 이 헤더파일 내에는 CHAR와 WCHAR가 정의 되어 있다. 각각 MBCS와 WBCS를 나타내는 자료형이다.
+
+## windows에서 정의하고 있는 자료형
+- 많은 자료형들이 windows 시스템 프로그래밍에 맞게 새로 정의되어 있지만, 몇 가지만 제안하도록 하겠다.
+```c++
+typedef char CHAR;
+typedef wchar_t WCHAR;
+#define CONST const
+typedef CHAR* LPSTR;
+typedef CONST CHAR* LPCSTR;
+typedef WCHAR* LPWSTR;
+typedef CONST WCHAR* LPCWSTR;
+
+int wmain(int argc, LPSTR argv[]){
+    LPSTR str1 = "SBCS style String";
+	LPWSTR str2 = L"WBCS Style String";
+	CHAR str3[] = "SBCS style String1";
+	WCHAR str4[] = L"WBCS Style String1";
+	LPCSTR str5 = str1;
+	LPCWSTR str6 = str2;
+	printf("%s\n", str1);
+	printf("%s\n", str3);
+	wprintf(L"%s\n", str2);
+	wprintf(L"%s\n", str4);
+	return;
+}
+```
+- 위에 코드에서 확인할 수 있듯이, 새로운 자료형이 재정의되었는데, 이는 절대적인 것은 아니다. 프로젝트를 진행하는 사람들 끼리 서로 약속한다면 새로운 자료형을 정의해서 사용할 수 있다.
+
+## MBCS와 WBCS를 동시에 지원하기 위한 매크로.
