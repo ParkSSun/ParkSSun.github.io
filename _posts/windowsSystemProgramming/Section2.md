@@ -108,3 +108,25 @@ int wmain(int argc, LPSTR argv[]){
 - 위에 코드에서 확인할 수 있듯이, 새로운 자료형이 재정의되었는데, 이는 절대적인 것은 아니다. 프로젝트를 진행하는 사람들 끼리 서로 약속한다면 새로운 자료형을 정의해서 사용할 수 있다.
 
 ## MBCS와 WBCS를 동시에 지원하기 위한 매크로.
+- MBCS와 WBCS를 동시에 지원하기 위한 매크로는 전처리기와의 조합으로 되어 있다.
+- 다음 예와 같이 정의 될 수 있다.
+```c++
+#ifdef UNICODE
+typedef WCHAR	TCHAR;
+typedef LPWSTR	LPTSTR;
+typedef LPCWSTR	LPCTSTR;
+#else
+typedef CHAR	TCHAR;
+typedef LPSTR	LPTSTR;
+typedef LPCSTR	LPCTSTR;
+#endif
+
+#ifdef UNICODE
+#define __T(x) L##x
+#else
+#define __T(x) x
+#endif
+#define _T(x)		__T(x)
+#define _TEXT(x)	__T(x)
+```
+- 이를 통해서 UNICODE인지 아닌지는 전처리기에 의해서 처리되고, 프로그래머 입장에서는 그냥 둘 다 지원이 되는 코드를 구현할 수 있는 것이다.
