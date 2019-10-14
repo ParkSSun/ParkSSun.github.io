@@ -33,18 +33,15 @@ int main(){
     int b = 2;
     func1();
 }
-
 void func1(){
     int c = 3;
     int d = 4;
     func2();
 }
-
 void func2(){
     int e = 5;
     int f = 6;
 }
-
 ```
 
 - 위의 경우에 대한 stack memory구조에 대해서 확인 가정해보자
@@ -79,3 +76,21 @@ void func2(){
     - caller(함수 호출 부)에서 해주는 경우
     - function (호출 된 함수)에서 해주는 경우
 - **함수 호출 규약은 함수 호출 시 인자를 전달하는 방식과 호출이 끝날 때, stack frame을 정리하는 방식에 대한 규약이다.**
+
+## _cdecl, _stdcall
+```c++
+int _stdcall STDCallFunction(int a, int b, int c);
+```
+- 위와 같이 선언 되있다면, _stdcall calling convention따라서 처리하라는 것이다.
+- _stdcall과 같은 선언을 보지 못했다면, default로 환경설정을 해준 것이다.
+
+## 호출규약의 종류와 의미
+| segment word size| calling convention | Parameters in registers | Parameter order on stacks | Stack cleanup by |
+| --- | --- | --- | --- | --- |
+| 32bit | _cdelcl | stack | C | caller |
+| 32bit | _stdcall | stack | C | function |
+| 32bit | _fastcall | ecx, edx reg | C | function |
+| 32bit | _thiscall | ecx | C | Function |
+| 64bit | Windows  | register 여러개 | C | caller |
+| 64bit | Linux | register 여러개 | C | caller |
+|   |   |   |   |   |
