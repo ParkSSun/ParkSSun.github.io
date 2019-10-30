@@ -93,4 +93,6 @@ int _stdcall STDCallFunction(int a, int b, int c);
 | 32bit | _thiscall | ecx | C | Function |
 | 64bit | Windows  | register 여러개 | C | caller |
 | 64bit | Linux | register 여러개 | C | caller |
-|   |   |   |   |   |
+
+### call back 함수란?
+- 시스템에 의해서 자동으로 호출되는 함수를 의미한다. 특정 상황에 호출되어야 하는 함수를 시스템에 등록해놓을 수 있고, 특정 상황이 되는 경우 등록해놓은 call back함수가 호출 되게 된다.
