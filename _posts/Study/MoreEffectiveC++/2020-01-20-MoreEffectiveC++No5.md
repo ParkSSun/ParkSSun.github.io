@@ -59,4 +59,5 @@ public:
 };
 ```
 
+- explicit keyword 사용 시, 암시적 타입변환에 생성자가 사용되지 않는다.
 
