@@ -81,9 +81,14 @@ categories: Study
 #### Programming Study Table
 | Index | Study 항목 | 왜 해야 하는가  | 어떻게 할 것 | 일정 | FeedBack | 보상 |
 | ---| --- | --- | --- | --- | --- | --- |
-|  |   |   |   |   |   |   |
-|  |   |   |   |   |   |   |
-|  |   |   |   |   |   |   |
+| 1. | Python | AI 및 새로운 언어 제대로 학습 | Parser Program을 Python으로 짤 것 | Parser짜는 동안 계속 사용 | 일단 기본 공부 하고(자료형)  | Parser완성 시, 포인트 10점 |
+| 2. | JAVA | 기본적인 Programming언어 습득 | Network관련 code작성 시, JAVA사용 | Network관련 공부 시 사용 | 고민!?  | 코드 완성도를 보고 결정  |
+| 3. | Embedded OS | OS 한번 만들어 보는게 소원 | OS책 보면서 차근 차근 만들 것  | 9월 까지인데, 어떻게 할지는 고민 | chapter별로 어떻게 할지 정하자 | chapter별 Point할당  |
+| 4. | Network | 기본 소양이지! network는! | 아직 미정..OS공부하면서 같이 할건데..  | 9월까지 같이 하자 | TBD  |   |
+| 5. | Visual Studio Code Editor | 새로운 Text 편집기 사용 | 올해는 이것으로 사용하면서, 매일 Function key 2개씩 보자 | Function key또는 기능 3개 마다 점수 |   | 3개마다 0.2점  |
+| 6 | bitbucket | 새로운 형상관리 tool | 올해 사용하는 모든 code bit bucket으로 관리 | 올해 계속 사용 | 새로운 기능 1개씩 찾아보기 | 올해 마지막에 판단 |
+| 7 | Unit test tool | JAVA -JUnit/ Python UnitTest module사용 | Unit test는 안전한 코드의 기본이다. | 계속 사용 | 모든 코드의 Test code삽입 | 완성도에 따라 판단  |
+| 8 | CI Study | CI How todo? trend | bit bucket과 Bamboo의 사용 | ?  | ?  | ?  |
 
 ### Photo
 - what
