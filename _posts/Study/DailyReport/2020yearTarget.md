@@ -81,9 +81,10 @@ categories: Study
 #### Programming Study Table
 | Index | Study 항목 | 왜 해야 하는가  | 어떻게 할 것 | 일정 | FeedBack | 보상 |
 | ---| --- | --- | --- | --- | --- | --- |
-|  |   |   |   |   |   |   |
-|  |   |   |   |   |   |   |
-|  |   |   |   |   |   |   |
+| 1 | Python Study  | 새로운 언어의 습득 | CMD Parser 및 Ac param spec violation checker만들때, 필요함 | 2020년 06월  | 언어이용해서 구현하면서 필요시 검증받을 수 있도록 한다. | 언어 이용해서 다 구현시 포인트 10점 |
+| 2 |  JAVA Script Study | 새로운 언어의 습득 | CMD Parser 및 AC param spec violation checker만들 때 필요함 | 2020년 12월  | 언어이용해서 구현하면서 필요시, 검증 받을 수 있도록 한다. | 언어를 이용해서 모두 구현시 포인트 10점 |
+| 3 |  Embedded OS 구현 | embedded system의 이해 및 이를 기반으로한 OS의 구현을 해보는 것을 Embedded system 개발자로써 필요한 소양이다.| 도전 embedded os만들기 책한권 Finish하면서 실제로 OS를 구현해 볼 수 있도록 한다. |  2020년 4월 첫쨰주. | 매 chapter가 끝날 때 마다. 제대로된 구현 여부 확인 | 구현 완료시 포인트 20점 |
+| 4 |  Network의 구현 | TCP/IP Study는 프로그래머의 기본 소양 중 하나이다. 네트워크를 이해하지 못하는 프로그래머는 ... 반쪽자리이다.  | TCP IP 책 구입하여 Study진행 | 2020 4월 내 끝| 매 chapter를 study | 20점 추가 |
 
 ### Photo
 - what
