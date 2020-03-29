@@ -89,6 +89,8 @@ categories: Study
 | 6 | bitbucket | 새로운 형상관리 tool | 올해 사용하는 모든 code bit bucket으로 관리 | 올해 계속 사용 | 새로운 기능 1개씩 찾아보기 | 올해 마지막에 판단 |
 | 7 | Unit test tool | JAVA -JUnit/ Python UnitTest module사용 | Unit test는 안전한 코드의 기본이다. | 계속 사용 | 모든 코드의 Test code삽입 | 완성도에 따라 판단  |
 | 8 | CI Study | CI How todo? trend | bit bucket과 Bamboo의 사용 | ?  | ?  | ?  |
+| 9 |  Embedded OS 구현 | embedded system의 이해 및 이를 기반으로한 OS의 구현을 해보는 것을 Embedded system 개발자로써 필요한 소양이다.| 도전 embedded os만들기 책한권 Finish하면서 실제로 OS를 구현해 볼 수 있도록 한다. |  2020년 4월 첫쨰주. | 매 chapter가 끝날 때 마다. 제대로된 구현 여부 확인 | 구현 완료시 포인트 20점 |
+
 
 ### Photo
 - what
