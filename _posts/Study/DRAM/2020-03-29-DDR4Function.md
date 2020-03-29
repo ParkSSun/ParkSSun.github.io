@@ -174,5 +174,12 @@ categories: DRAM Platform
 - page 0/1/2/3은 뭐냐!?
 - DLL Lock은 어떻게 하냐?
 
-##
+## Data Mask (DM)
+### What
+
+
+### Why
+
+
+### How
 
