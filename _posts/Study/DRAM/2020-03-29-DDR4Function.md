@@ -146,7 +146,7 @@ categories: DRAM Platform
     - RL 후 Data Out from MPR Location
     - Out시, MRS MR3 A2 = 0 set
     - tMRS and tMOD Wait
-    - regular dram cmd use 가능.
+    - regular dram cmd use 가능c
 
 #### 사용처4. MPR Write
 - 제약 조건 없냐?
